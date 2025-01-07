@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Image Compression Tool
 
 A sleek, Apple-style web application for compressing images efficiently.
@@ -15,3 +16,6 @@ A sleek, Apple-style web application for compressing images efficiently.
 - Pure JavaScript implementation
 - Modern CSS with Flexbox layout
 - Supports all modern browsers 
+=======
+# first-website
+>>>>>>> 529748460872b9a9052ef1445cd409b5dd173ddf
