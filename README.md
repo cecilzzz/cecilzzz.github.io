@@ -15,6 +15,3 @@ A sleek, Apple-style web application for compressing images efficiently.
 - Pure JavaScript implementation
 - Modern CSS with Flexbox layout
 - Supports all modern browsers 
-
-
-改动测试
