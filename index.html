@@ -4,43 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Decor Inspiration</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="/dist/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="font-montserrat text-gray-800">
     <!-- Header -->
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="/">
-                    <img src="assets/images/logo-main-light.png" alt="Website Logo" class="logo-img logo-light">
-                    <img src="assets/images/logo-main-dark.png" alt="Website Logo" class="logo-img logo-dark">
+    <header class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Logo -->
+            <div class="flex flex-col items-center py-4">
+                <a href="/" class="mb-2">
+                    <img src="assets/images/logo-main-light.png" alt="Website Logo" 
+                         class="h-[280px] w-auto md:h-[180px] transition-opacity duration-300">
                 </a>
             </div>
             
-            <nav class="nav-links">
-                <a href="#gallery">Visual Inspiration</a>
-                <a href="#room-guides">Room Guides</a>
-                <a href="#styles">Design Styles</a>
-                <a href="#community">Community</a>
-                <a href="#learning">Learning Hub</a>
+            <!-- Navigation -->
+            <nav class="flex justify-center space-x-12 py-4">
+                <a href="#gallery" class="nav-link">Visual Inspiration</a>
+                <a href="#room-guides" class="nav-link">Room Guides</a>
+                <a href="#styles" class="nav-link">Design Styles</a>
+                <a href="#community" class="nav-link">Community</a>
+                <a href="#learning" class="nav-link">Learning Hub</a>
             </nav>
             
-            <div class="nav-right">
-                <input type="search" class="search-bar" placeholder="Search designs...">
-                <a href="#account">Account</a>
-                <a href="#cart">Cart</a>
+            <!-- Search and Account -->
+            <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-6">
+                <input type="search" 
+                       placeholder="Search designs..." 
+                       class="px-4 py-2 border border-gray-200 focus:border-pink-400 outline-none text-sm">
+                <a href="#account" class="text-gray-800 hover:text-pink-400">Account</a>
+                <a href="#cart" class="text-gray-800 hover:text-pink-400">Cart</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-image"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Transform Your Space with Timeless Design</h1>
+    <section class="relative h-[85vh] text-white">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000" 
+                 alt="Hero background" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative h-full flex items-center justify-center px-4">
+            <h1 class="font-playfair text-5xl md:text-6xl max-w-4xl text-center leading-tight">
+                Transform Your Space with Timeless Design
+            </h1>
         </div>
     </section>
 

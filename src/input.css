@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-link {
+    @apply text-gray-800 hover:text-pink-400 uppercase text-sm tracking-wider py-2 transition-colors duration-300;
+  }
+} 
