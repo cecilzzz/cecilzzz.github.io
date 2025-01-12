@@ -1,88 +1,52 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior Inspiration</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Home Decor Inspiration</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="nav-container">
-        <div class="logo">Interior Inspiration</div>
-        <ul class="nav-menu">
-            <li><a href="#home">首頁</a></li>
-            <li class="dropdown">
-                <a href="#spaces">空間靈感 <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="#living-room">客廳設計</a></li>
-                    <li><a href="#bedroom">臥室設計</a></li>
-                    <li><a href="#kitchen">廚房設計</a></li>
-                    <li><a href="#bathroom">衛浴空間</a></li>
-                    <li><a href="#office">居家辦公</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#styles">風格指南 <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="#modern">現代風格</a></li>
-                    <li><a href="#scandinavian">北歐風格</a></li>
-                    <li><a href="#industrial">工業風格</a></li>
-                </ul>
-            </li>
-            <li><a href="#diy">DIY創意</a></li>
-            <li><a href="#shop">購物中心</a></li>
-            <li><a href="#resources">實用資源</a></li>
-            <li><a href="#blog">部落格</a></li>
-        </ul>
-        <div class="nav-tools">
-            <a href="#search"><i class="fas fa-search"></i></a>
-            <a href="#bookmarks"><i class="fas fa-bookmark"></i></a>
-        </div>
-    </nav>
-
-    <main>
-        <!-- 精選空間展示區 Featured Spaces -->
-        <section class="featured-spaces">
-            <h2>精選空間靈感</h2>
-            <div class="space-grid">
-                <article class="space-card">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80" 
-                         alt="現代風格客廳"
-                         loading="lazy">
-                    <h3>明亮現代客廳</h3>
-                    <p>簡約俐落的現代風格，搭配大面落地窗，創造出舒適寬敞的生活空間。</p>
-                </article>
-                <article class="space-card">
-                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80" 
-                         alt="北歐風臥室"
-                         loading="lazy">
-                    <h3>溫馨北歐臥室</h3>
-                    <p>柔和的配色搭配原木元素，營造出舒適自然的睡眠環境。</p>
-                </article>
-                <article class="space-card">
-                    <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1200&q=80" 
-                         alt="現代廚房"
-                         loading="lazy">
-                    <h3>時尚現代廚房</h3>
-                    <p>高效能的空間配置，搭配現代化電器，打造理想的烹飪環境。</p>
-                </article>
-                <article class="space-card">
-                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80" 
-                         alt="簡約衛浴"
-                         loading="lazy">
-                    <h3>簡約精緻衛浴</h3>
-                    <p>極簡設計風格，創造出清爽舒適的沐浴空間。</p>
-                </article>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/">
+                    <img src="assets/images/logo-main-light.png" alt="Website Logo" class="logo-img logo-light">
+                    <img src="assets/images/logo-main-dark.png" alt="Website Logo" class="logo-img logo-dark">
+                </a>
             </div>
-        </section>
-    </main>
+            
+            <nav class="nav-links">
+                <a href="#gallery">Visual Inspiration</a>
+                <a href="#room-guides">Room Guides</a>
+                <a href="#styles">Design Styles</a>
+                <a href="#community">Community</a>
+                <a href="#learning">Learning Hub</a>
+            </nav>
+            
+            <div class="nav-right">
+                <input type="search" class="search-bar" placeholder="Search designs...">
+                <a href="#account">Account</a>
+                <a href="#cart">Cart</a>
+            </div>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="category">INTERIOR DESIGN / INSPIRATION</div>
+            <h1 class="hero-title">Transform Your Space with Timeless Design</h1>
+            <div class="hero-subtitle">Discover curated inspiration for your perfect home</div>
+        </div>
+    </section>
+
+    <!-- Main content sections would follow -->
+    
+    <!-- Footer -->
     <footer>
-        <!-- 页脚内容 Footer content -->
+        <!-- Footer content -->
     </footer>
-
-    <script src="js/main.js"></script>
 </body>
 </html>

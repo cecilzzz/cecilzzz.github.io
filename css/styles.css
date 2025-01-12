@@ -1,0 +1,271 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #f8a4a4;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --spacing-unit: 2rem;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header styling */
+.header {
+    padding: 2rem 0;
+    background: var(--background-color);
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo {
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+}
+
+.logo a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Logo image specific styles */
+.logo-img {
+    height: 280px;
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* 默认显示亮色logo */
+.logo-dark {
+    display: none;
+}
+
+.logo-light {
+    display: block;
+}
+
+/* 响应式设计 - 在小屏幕上显示较小的logo */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 180px;
+    }
+    
+    .logo {
+        padding: 0.3rem 0;
+    }
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Subtle hover effect */
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Underline effect on hover */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0066cc;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Right section (Search, Account, Cart) */
+.nav-right {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Search bar styling */
+.search-bar {
+    padding: 0.5rem 1rem;
+    border: 1px solid #eee;
+    border-radius: 0;
+    width: 180px;
+    font-size: 0.85rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+/* Account and Cart links */
+.nav-right a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-right a:hover {
+    color: var(--secondary-color);
+}
+
+/* Cart badge */
+.cart-icon {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--secondary-color);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Hero section */
+.hero {
+    padding: 6rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section Layouts */
+section {
+    padding: var(--spacing-unit);
+    margin: var(--spacing-unit) 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid Layouts */
+.image-grid,
+.room-grid,
+.style-grid,
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-unit);
+    padding: var(--spacing-unit) 0;
+}
+
+/* Cards */
+.room-card,
+.style-card,
+.resource-card {
+    background: white;
+    border-radius: 8px;
+    padding: var(--spacing-unit);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.room-card:hover,
+.style-card:hover,
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Community Section */
+.community-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-unit);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 1.5rem;
+    }
+    
+    .search-bar {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 0;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .nav-right {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 1rem;
+    }
+    
+    .search-bar {
+        width: 150px;
+    }
+}
