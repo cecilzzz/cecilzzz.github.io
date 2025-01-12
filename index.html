@@ -1,298 +1,55 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>室內設計靈感 | 打造理想的居家空間</title>
-    
-    <!-- 使用 Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- 使用 Font Awesome 图标 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        /* 基础设置 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* 导航栏样式 */
-        .header {
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        /* Navigation container */
-        .nav-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 2rem;
-            background: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2c3e50;
-        }
-
-        /* Dropdown styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;  /* Hidden by default */
-            position: absolute;
-            top: 100%;      /* Position right below the parent */
-            left: 0;
-            background: white;
-            min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 4px;
-            z-index: 1000;  /* Ensure dropdown appears above other content */
-        }
-
-        /* Only show dropdown when hovering over the parent li */
-        .dropdown:hover > .dropdown-content {
-            display: block;
-        }
-
-        /* Hide dropdown when mouse leaves */
-        .dropdown-content:not(:hover) {
-            display: none;
-        }
-
-        /* Dropdown items */
-        .dropdown-content li {
-            list-style: none;
-        }
-
-        .dropdown-content a {
-            padding: 0.8rem 1rem;
-            display: block;
-            color: #333;
-            text-decoration: none;
-            transition: background-color 0.2s;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f5f5f5;
-        }
-
-        /* Navigation menu general styles */
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-menu > li > a {
-            color: #333;
-            text-decoration: none;
-            padding: 0.5rem 0;
-        }
-
-        /* 主要内容区域 */
-        .main-content {
-            margin-top: 80px;
-            padding: 2rem;
-        }
-
-        /* 特色文章区域 */
-        .featured-post {
-            position: relative;
-            height: 500px;
-            margin-bottom: 3rem;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .featured-post img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .featured-content {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 2rem;
-            background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            color: white;
-        }
-
-        /* 文章网格 */
-        .posts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .post-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .post-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .post-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .post-content {
-            padding: 1.5rem;
-        }
-
-        .post-content h3 {
-            margin-bottom: 0.5rem;
-            color: #2c3e50;
-        }
-
-        .post-meta {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .featured-post {
-                height: 300px;
-            }
-
-            .posts-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Interior Inspiration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">Interior Inspiration</div>
-            <ul class="nav-menu">
-                <li><a href="#home">首頁</a></li>
-                <li class="dropdown">
-                    <a href="#spaces">空間靈感 <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="#living-room">客廳設計</a></li>
-                        <li><a href="#bedroom">臥室設計</a></li>
-                        <li><a href="#kitchen">廚房設計</a></li>
-                        <li><a href="#bathroom">衛浴空間</a></li>
-                        <li><a href="#office">居家辦公</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#styles">風格指南 <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="#modern">現代風格</a></li>
-                        <li><a href="#scandinavian">北歐風格</a></li>
-                        <li><a href="#industrial">工業風格</a></li>
-                        <!-- ... more styles ... -->
-                    </ul>
-                </li>
-                <li><a href="#diy">DIY創意</a></li>
-                <li><a href="#shop">購物中心</a></li>
-                <li><a href="#resources">實用資源</a></li>
-                <li><a href="#blog">部落格</a></li>
-            </ul>
-            <div class="nav-tools">
-                <a href="#search"><i class="fas fa-search"></i></a>
-                <a href="#bookmarks"><i class="fas fa-bookmark"></i></a>
-            </div>
-        </nav>
-    </header>
+    <nav class="nav-container">
+        <div class="logo">Interior Inspiration</div>
+        <ul class="nav-menu">
+            <li><a href="#home">首頁</a></li>
+            <li class="dropdown">
+                <a href="#spaces">空間靈感 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#living-room">客廳設計</a></li>
+                    <li><a href="#bedroom">臥室設計</a></li>
+                    <li><a href="#kitchen">廚房設計</a></li>
+                    <li><a href="#bathroom">衛浴空間</a></li>
+                    <li><a href="#office">居家辦公</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#styles">風格指南 <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#modern">現代風格</a></li>
+                    <li><a href="#scandinavian">北歐風格</a></li>
+                    <li><a href="#industrial">工業風格</a></li>
+                </ul>
+            </li>
+            <li><a href="#diy">DIY創意</a></li>
+            <li><a href="#shop">購物中心</a></li>
+            <li><a href="#resources">實用資源</a></li>
+            <li><a href="#blog">部落格</a></li>
+        </ul>
+        <div class="nav-tools">
+            <a href="#search"><i class="fas fa-search"></i></a>
+            <a href="#bookmarks"><i class="fas fa-bookmark"></i></a>
+        </div>
+    </nav>
 
-    <!-- 主要内容区域 -->
-    <main class="main-content">
-        <!-- 特色文章 -->
-        <section class="featured-post">
-            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" alt="現代客廳設計">
-            <div class="featured-content">
-                <h1>25個小戶型客廳設計技巧</h1>
-                <p>探索如何在有限空間創造最大價值，打造完美的現代居家環境</p>
-            </div>
-        </section>
-
-        <!-- 最新文章 -->
-        <section class="latest-posts">
-            <h2>最新設計靈感</h2>
-            <div class="posts-grid">
-                <!-- 文章卡片 1 -->
-                <article class="post-card">
-                    <img src="https://images.unsplash.com/photo-1616137466211-f939a420be84" alt="北歐風格臥室">
-                    <div class="post-content">
-                        <h3>北歐風格臥室佈置指南</h3>
-                        <div class="post-meta">
-                            <i class="far fa-clock"></i> 2024/03/21
-                            <i class="far fa-eye"></i> 2,345
-                        </div>
-                        <p>學習如何運用簡約元素打造溫馨舒適的北歐風臥室...</p>
-                    </div>
-                </article>
-
-                <!-- 文章卡片 2 -->
-                <article class="post-card">
-                    <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf" alt="現代廚房設計">
-                    <div class="post-content">
-                        <h3>開放式廚房設計要點</h3>
-                        <div class="post-meta">
-                            <i class="far fa-clock"></i> 2024/03/20
-                            <i class="far fa-eye"></i> 1,892
-                        </div>
-                        <p>打造完美開放式廚房的關鍵要素和注意事項...</p>
-                    </div>
-                </article>
-
-                <!-- 文章卡片 3 -->
-                <article class="post-card">
-                    <img src="https://images.unsplash.com/photo-1617104666298-550ed9c5d7b0" alt="工作空間設計">
-                    <div class="post-content">
-                        <h3>居家辦公空間佈置</h3>
-                        <div class="post-meta">
-                            <i class="far fa-clock"></i> 2024/03/19
-                            <i class="far fa-eye"></i> 1,677
-                        </div>
-                        <p>如何打造既專業又舒適的居家辦公環境...</p>
-                    </div>
-                </article>
-            </div>
-        </section>
+    <main>
+        <!-- 主要内容区域 Main content area -->
     </main>
+
+    <footer>
+        <!-- 页脚内容 Footer content -->
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
