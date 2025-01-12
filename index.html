@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Decor Inspiration</title>
-    <link href="/dist/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 <body class="font-montserrat text-gray-800">
     <!-- Header -->
     <header class="bg-white border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-7xl mx-auto px-4 relative">
             <!-- Logo -->
             <div class="flex flex-col items-center py-4">
                 <a href="/" class="mb-2">
@@ -59,11 +59,171 @@
         </div>
     </section>
 
-    <!-- Main content sections would follow -->
-    
+    <!-- 主要内容区域 -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+        <!-- 标题 -->
+        <div class="text-center mb-12">
+            <h2 class="font-playfair text-3xl md:text-4xl mb-4">Featured Designs</h2>
+            <p class="text-gray-600">Discover inspiring spaces that reflect your style</p>
+        </div>
+
+        <!-- 设计卡片网格 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 设计卡片 1 -->
+            <div class="group overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace" 
+                         alt="Modern Living Room" 
+                         class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-opacity"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-playfair text-xl mb-2">Modern Living Room</h3>
+                    <p class="text-gray-600 mb-4">Clean lines and natural light create a peaceful atmosphere</p>
+                    <a href="#" class="text-pink-400 hover:text-pink-500">View Details →</a>
+                </div>
+            </div>
+
+            <!-- 设计卡片 2 -->
+            <div class="group overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1616137466211-f939a420be84" 
+                         alt="Cozy Bedroom" 
+                         class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-opacity"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-playfair text-xl mb-2">Cozy Bedroom</h3>
+                    <p class="text-gray-600 mb-4">Soft textures and warm tones for ultimate comfort</p>
+                    <a href="#" class="text-pink-400 hover:text-pink-500">View Details →</a>
+                </div>
+            </div>
+
+            <!-- 设计卡片 3 -->
+            <div class="group overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1616137466211-f939a420be84" 
+                         alt="Minimalist Kitchen" 
+                         class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-opacity"></div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-playfair text-xl mb-2">Minimalist Kitchen</h3>
+                    <p class="text-gray-600 mb-4">Functional elegance for the heart of your home</p>
+                    <a href="#" class="text-pink-400 hover:text-pink-500">View Details →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 设计风格展示区 -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-playfair text-3xl md:text-4xl text-center mb-12">Popular Design Styles</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 现代简约 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Modern Style" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl mb-2">Modern Minimal</h3>
+                        <p class="text-gray-600">Clean lines and uncluttered spaces</p>
+                    </div>
+                </div>
+
+                <!-- 其他风格卡片 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Rustic Style" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl mb-2">Rustic Charm</h3>
+                        <p class="text-gray-600">Warm tones and natural materials</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Industrial Style" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl mb-2">Industrial Edge</h3>
+                        <p class="text-gray-600">Exposed elements and raw textures</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Bohemian Style" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-playfair text-xl mb-2">Bohemian Vibes</h3>
+                        <p class="text-gray-600">Eclectic patterns and vibrant colors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer>
-        <!-- Footer content -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- 页脚主要内容 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- 品牌信息 -->
+                <div>
+                    <img src="assets/images/logo-main-light.png" alt="Logo" class="h-12 w-auto mb-4">
+                    <p class="text-sm leading-relaxed">
+                        Transforming spaces into beautiful, functional environments that inspire and delight.
+                    </p>
+                </div>
+
+                <!-- 快速链接 -->
+                <div>
+                    <h3 class="font-playfair text-white text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- 联系方式 -->
+                <div>
+                    <h3 class="font-playfair text-white text-lg mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li>Email: hello@oliviawilson.com</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Address: 123 Design Street, NY</li>
+                    </ul>
+                </div>
+
+                <!-- 订阅newsletter -->
+                <div>
+                    <h3 class="font-playfair text-white text-lg mb-4">Stay Inspired</h3>
+                    <p class="text-sm mb-4">Subscribe to our newsletter for design tips and inspiration.</p>
+                    <form class="space-y-2">
+                        <input type="email" 
+                               placeholder="Enter your email" 
+                               class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-pink-400 text-white">
+                        <button class="w-full px-4 py-2 bg-pink-400 hover:bg-pink-500 rounded-lg text-white transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 分隔线 -->
+            <div class="border-t border-gray-800 pt-8">
+                <!-- 社交媒体链接 -->
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="#" class="hover:text-white transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-white transition-colors">Pinterest</a>
+                    <a href="#" class="hover:text-white transition-colors">Facebook</a>
+                    <a href="#" class="hover:text-white transition-colors">Twitter</a>
+                </div>
+
+                <!-- 版权信息 -->
+                <div class="text-center text-sm">
+                    <p>&copy; 2024 Olivia Wilson Interior Design. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
