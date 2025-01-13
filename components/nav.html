@@ -2,11 +2,11 @@
 <div class="nav-wrapper">
     <!-- Logo Section -->
     <div class="w-full px-4">
-        <div class="w-[90%] max-w-7xl min-w-[800px] mx-auto">
+        <div class="w-[90%] max-w-7xl mx-auto">
             <div class="flex justify-center py-4">
                 <a href="/" class="mb-2">
                     <img src="assets/images/logo-main-light.png" alt="Website Logo" 
-                         class="h-[180px] w-auto transition-opacity duration-300">
+                         class="h-auto max-h-[180px] w-auto transition-opacity duration-300">
                 </a>
             </div>
         </div>
@@ -14,33 +14,35 @@
 
     <!-- Navigation Menu -->
     <nav class="border-t border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="w-[90%] max-w-7xl mx-auto px-4">
             <!-- Desktop Navigation -->
-            <div class="flex justify-center items-center h-16 space-x-12">
+            <div class="flex justify-center items-center h-full py-4 space-x-8">
                 <!-- Space Dropdown -->
                 <div class="relative group">
                     <a href="/space" class="nav-link uppercase tracking-widest text-sm font-medium group-hover:text-pink-400">Space</a>
+                    
                     <!-- Dropdown Menu -->
-                    <div class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <a href="/space/layout-solutions" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Layout Solutions</a>
+                    <div class="absolute left-0 mt-2 w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="/space/layout-solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Layout Solutions</a>
                         
                         <!-- Room Types with Submenu -->
                         <div class="relative group/room hover:bg-gray-50">
-                            <a href="/space/room-types" class="block px-4 py-2 text-sm text-gray-700 hover:text-pink-400 flex justify-between items-center">
+                            <a href="/space/room-types" class="block px-4 py-2.5 text-sm text-gray-700 hover:text-pink-400 flex justify-between items-center">
                                 Room Types
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                 </svg>
                             </a>
+                            
                             <!-- Second Level Dropdown -->
-                            <div class="absolute left-full top-0 w-48 bg-white border border-gray-200 rounded-lg shadow-lg
+                            <div class="absolute left-full top-0 w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg 
                                         opacity-0 invisible 
                                         group-hover/room:opacity-100 group-hover/room:visible 
                                         transition-all duration-300">
-                                <a href="/space/room-types/living-room" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Living Room</a>
-                                <a href="/space/room-types/bedroom" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Bedroom</a>
-                                <a href="/space/room-types/kitchen" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Kitchen</a>
-                                <a href="/space/room-types/bathroom" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Bathroom</a>
+                                <a href="/space/room-types/living-room" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Living Room</a>
+                                <a href="/space/room-types/bedroom" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Bedroom</a>
+                                <a href="/space/room-types/kitchen" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Kitchen</a>
+                                <a href="/space/room-types/bathroom" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Bathroom</a>
                             </div>
                         </div>
                         
@@ -59,11 +61,26 @@
 </div>
 
 <style>
+/* 導航鏈接基礎樣式 */
 .nav-link {
-    @apply text-gray-800 hover:text-pink-400 transition-colors duration-300;
+    @apply text-gray-800 transition-colors duration-300;
 }
 
+/* 導航鏈接懸停效果 */
 .nav-link:hover {
     @apply text-pink-400;
+}
+
+/* 下拉菜單項目基礎樣式 */
+.dropdown-item {
+    @apply block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400;
+}
+
+/* 下拉菜單容器基礎樣式 */
+.dropdown-container {
+    @apply absolute w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg 
+           opacity-0 invisible 
+           group-hover:opacity-100 group-hover:visible 
+           transition-all duration-300;
 }
 </style>
