@@ -3049,6 +3049,10 @@ video {
   visibility: visible;
 }
 
+.group\/room:hover .group-hover\/room\:visible {
+  visibility: visible;
+}
+
 .group\/room:hover .group-hover\/room\:block {
   display: block;
 }
@@ -3069,6 +3073,10 @@ video {
 }
 
 .group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+.group\/room:hover .group-hover\/room\:opacity-100 {
   opacity: 1;
 }
 

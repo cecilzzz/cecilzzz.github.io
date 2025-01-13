@@ -33,7 +33,10 @@
                                 </svg>
                             </a>
                             <!-- Second Level Dropdown -->
-                            <div class="hidden group-hover/room:block absolute left-full top-0 w-48 bg-white border border-gray-200 rounded-lg shadow-lg">
+                            <div class="absolute left-full top-0 w-48 bg-white border border-gray-200 rounded-lg shadow-lg
+                                        opacity-0 invisible 
+                                        group-hover/room:opacity-100 group-hover/room:visible 
+                                        transition-all duration-300">
                                 <a href="/space/room-types/living-room" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Living Room</a>
                                 <a href="/space/room-types/bedroom" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Bedroom</a>
                                 <a href="/space/room-types/kitchen" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Kitchen</a>
