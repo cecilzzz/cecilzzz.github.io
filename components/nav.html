@@ -17,7 +17,35 @@
         <div class="max-w-7xl mx-auto px-4">
             <!-- Desktop Navigation -->
             <div class="hidden md:flex justify-center items-center h-16 space-x-12">
-                <a href="/space" class="nav-link uppercase tracking-widest text-sm font-medium">Space</a>
+                <!-- Space Dropdown -->
+                <div class="relative group">
+                    <a href="/space" class="nav-link uppercase tracking-widest text-sm font-medium group-hover:text-pink-400">Space</a>
+                    <!-- Dropdown Menu -->
+                    <div class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="/space/layout-solutions" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Layout Solutions</a>
+                        
+                        <!-- Room Types with Submenu -->
+                        <div class="relative group/room hover:bg-gray-50">
+                            <a href="/space/room-types" class="block px-4 py-2 text-sm text-gray-700 hover:text-pink-400 flex justify-between items-center">
+                                Room Types
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </a>
+                            <!-- Second Level Dropdown -->
+                            <div class="hidden group-hover/room:block absolute left-full top-0 w-48 bg-white border border-gray-200 rounded-lg shadow-lg">
+                                <a href="/space/room-types/living-room" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Living Room</a>
+                                <a href="/space/room-types/bedroom" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Bedroom</a>
+                                <a href="/space/room-types/kitchen" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Kitchen</a>
+                                <a href="/space/room-types/bathroom" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Bathroom</a>
+                            </div>
+                        </div>
+                        
+                        <a href="/space/storage-ideas" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Storage Ideas</a>
+                        <a href="/space/planning-tools" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Space Planning Tools</a>
+                    </div>
+                </div>
+
                 <a href="/color" class="nav-link uppercase tracking-widest text-sm font-medium">Color</a>
                 <a href="/light" class="nav-link uppercase tracking-widest text-sm font-medium">Light</a>
                 <a href="/style" class="nav-link uppercase tracking-widest text-sm font-medium">Style</a>
@@ -36,7 +64,39 @@
             <!-- Mobile Menu -->
             <div class="md:hidden hidden" id="mobile-menu">
                 <div class="py-2 space-y-1 text-center border-t border-gray-200">
-                    <a href="/space" class="block py-3 nav-link uppercase tracking-widest text-sm font-medium">Space</a>
+                    <!-- Space Section -->
+                    <div class="relative">
+                        <button class="w-full py-3 nav-link uppercase tracking-widest text-sm font-medium flex items-center justify-center" 
+                                onclick="toggleSubmenu('space-submenu')">
+                            Space
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="space-submenu" class="hidden bg-gray-50">
+                            <a href="/space/layout-solutions" class="block py-2 text-sm text-gray-700 hover:text-pink-400">Layout Solutions</a>
+                            
+                            <!-- Room Types Mobile -->
+                            <div class="relative">
+                                <button class="w-full py-2 text-sm text-gray-700 hover:text-pink-400 flex items-center justify-center"
+                                        onclick="toggleSubmenu('room-types-submenu')">
+                                    Room Types
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div id="room-types-submenu" class="hidden bg-gray-100">
+                                    <a href="/space/room-types/living-room" class="block py-2 text-sm text-gray-700 hover:text-pink-400">Living Room</a>
+                                    <a href="/space/room-types/bedroom" class="block py-2 text-sm text-gray-700 hover:text-pink-400">Bedroom</a>
+                                    <a href="/space/room-types/kitchen" class="block py-2 text-sm text-gray-700 hover:text-pink-400">Kitchen</a>
+                                    <a href="/space/room-types/bathroom" class="block py-2 text-sm text-gray-700 hover:text-pink-400">Bathroom</a>
+                                </div>
+                            </div>
+                            
+                            <a href="/space/storage-ideas" class="block py-2 text-sm text-gray-700 hover:text-pink-400">Storage Ideas</a>
+                            <a href="/space/planning-tools" class="block py-2 text-sm text-gray-700 hover:text-pink-400">Space Planning Tools</a>
+                        </div>
+                    </div>
                     <a href="/color" class="block py-3 nav-link uppercase tracking-widest text-sm font-medium">Color</a>
                     <a href="/light" class="block py-3 nav-link uppercase tracking-widest text-sm font-medium">Light</a>
                     <a href="/style" class="block py-3 nav-link uppercase tracking-widest text-sm font-medium">Style</a>
