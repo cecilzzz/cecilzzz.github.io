@@ -21,7 +21,7 @@
                 <div class="relative group">
                     <a href="/space" class="nav-link uppercase tracking-widest text-sm font-medium group-hover:text-pink-400">Space</a>
                     
-                    <!-- Dropdown Menu -->
+                    <!-- First Level Dropdown -->
                     <div class="absolute left-0 mt-2 w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                         <a href="/space/layout-solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Layout Solutions</a>
                         
@@ -35,10 +35,7 @@
                             </a>
                             
                             <!-- Second Level Dropdown -->
-                            <div class="absolute left-full top-0 w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg 
-                                        opacity-0 invisible 
-                                        group-hover/room:opacity-100 group-hover/room:visible 
-                                        transition-all duration-300">
+                            <div class="absolute left-full top-0 w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover/room:opacity-100 group-hover/room:visible transition-all duration-300">
                                 <a href="/space/room-types/living-room" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Living Room</a>
                                 <a href="/space/room-types/bedroom" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Bedroom</a>
                                 <a href="/space/room-types/kitchen" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Kitchen</a>
@@ -51,10 +48,52 @@
                     </div>
                 </div>
 
-                <a href="/color" class="nav-link uppercase tracking-widest text-sm font-medium">Color</a>
-                <a href="/light" class="nav-link uppercase tracking-widest text-sm font-medium">Light</a>
-                <a href="/style" class="nav-link uppercase tracking-widest text-sm font-medium">Style</a>
-                <a href="/inspiration" class="nav-link uppercase tracking-widest text-sm font-medium">Inspiration</a>
+                <!-- Color Dropdown -->
+                <div class="relative group">
+                    <a href="/color" class="nav-link uppercase tracking-widest text-sm font-medium group-hover:text-pink-400">Color</a>
+                    
+                    <div class="absolute left-0 mt-2 w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="/color/schemes" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Color Schemes</a>
+                        <a href="/color/psychology" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Color Psychology</a>
+                        <a href="/color/material-texture" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Material & Texture</a>
+                        <a href="/color/seasonal-trends" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Seasonal Trends</a>
+                    </div>
+                </div>
+
+                <!-- Light Dropdown -->
+                <div class="relative group">
+                    <a href="/light" class="nav-link uppercase tracking-widest text-sm font-medium group-hover:text-pink-400">Light</a>
+                    
+                    <div class="absolute left-0 mt-2 w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="/light/natural" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Natural Lighting</a>
+                        <a href="/light/artificial" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Artificial Lighting</a>
+                        <a href="/light/room-solutions" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Room-specific Solutions</a>
+                        <a href="/light/products" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Lighting Products</a>
+                    </div>
+                </div>
+
+                <!-- Style Dropdown -->
+                <div class="relative group">
+                    <a href="/style" class="nav-link uppercase tracking-widest text-sm font-medium group-hover:text-pink-400">Style</a>
+                    
+                    <div class="absolute left-0 mt-2 w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="/style/guide" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Style Guide</a>
+                        <a href="/style/quiz" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Style Quiz</a>
+                        <a href="/style/mix-match" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Style Mix & Match</a>
+                        <a href="/style/trending" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Trending Styles</a>
+                    </div>
+                </div>
+
+                <!-- Inspiration Dropdown -->
+                <div class="relative group">
+                    <a href="/inspiration" class="nav-link uppercase tracking-widest text-sm font-medium group-hover:text-pink-400">Inspiration</a>
+                    
+                    <div class="absolute left-0 mt-2 w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="/inspiration/featured" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Featured Projects</a>
+                        <a href="/inspiration/stories" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">User Stories</a>
+                        <a href="/inspiration/interviews" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400">Designer Interviews</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -64,23 +103,5 @@
 /* 導航鏈接基礎樣式 */
 .nav-link {
     @apply text-gray-800 transition-colors duration-300;
-}
-
-/* 導航鏈接懸停效果 */
-.nav-link:hover {
-    @apply text-pink-400;
-}
-
-/* 下拉菜單項目基礎樣式 */
-.dropdown-item {
-    @apply block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-pink-400;
-}
-
-/* 下拉菜單容器基礎樣式 */
-.dropdown-container {
-    @apply absolute w-auto min-w-[12rem] bg-white border border-gray-200 rounded-lg shadow-lg 
-           opacity-0 invisible 
-           group-hover:opacity-100 group-hover:visible 
-           transition-all duration-300;
 }
 </style>
