@@ -10,36 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body class="font-montserrat text-gray-800">
-    <!-- Header -->
-    <header class="bg-white border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 relative">
-            <!-- Logo -->
-            <div class="flex flex-col items-center py-4">
-                <a href="/" class="mb-2">
-                    <img src="assets/images/logo-main-light.png" alt="Website Logo" 
-                         class="h-[280px] w-auto md:h-[180px] transition-opacity duration-300">
-                </a>
-            </div>
-            
-            <!-- Navigation -->
-            <nav class="flex justify-center space-x-12 py-4">
-                <a href="#gallery" class="nav-link">Visual Inspiration</a>
-                <a href="#room-guides" class="nav-link">Room Guides</a>
-                <a href="#styles" class="nav-link">Design Styles</a>
-                <a href="#community" class="nav-link">Community</a>
-                <a href="#learning" class="nav-link">Learning Hub</a>
-            </nav>
-            
-            <!-- Search and Account -->
-            <div class="absolute right-8 top-1/2 -translate-y-1/2 flex items-center space-x-6">
-                <input type="search" 
-                       placeholder="Search designs..." 
-                       class="px-4 py-2 border border-gray-200 focus:border-pink-400 outline-none text-sm">
-                <a href="#account" class="text-gray-800 hover:text-pink-400">Account</a>
-                <a href="#cart" class="text-gray-800 hover:text-pink-400">Cart</a>
-            </div>
-        </div>
-    </header>
+    <div id="nav-container"></div>
 
     <!-- Hero Section -->
     <section class="relative h-[85vh] text-white">
@@ -472,5 +443,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- 加载组件的脚本 -->
+    <script src="js/components.js"></script>
 </body>
 </html>
